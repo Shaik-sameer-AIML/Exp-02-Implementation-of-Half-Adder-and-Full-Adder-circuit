@@ -38,17 +38,50 @@ If the output is 1, then the led glows.
 Program:
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: shaik sameer
+RegisterNumber:  212221240051
 */
-Logic symbol & Truthtable
-RTL realization
+
+
+HALF ADDER
+
+module Adder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule 
+
+FULL ADDER
+
+module FullAdder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b)|(b&c)|(c&a));
+endmodule
 
 ### Output:
-### RTL
-### TIMING DIAGRAM
+### Half Adder:
+### Logic symbol:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/ha.JPG?raw=true)
+### RTL:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/hd%20rtl.JPG?raw=true)
+### Truthtable:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/hd%20truthtable.JPG?raw=true)
+### TIMING DIAGRAM:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/hd%20trimging.JPG?raw=true)
+### Full Adder:
+### Logic symbol:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/fd.JPG?raw=true)
+### RTL:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/fd%20rtl.JPG?raw=true)
+### Truthtable:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/fd%20truth%20table.JPG?raw=true)
+### TIMING DIAGRAM:
+![output](https://github.com/Shaik-sameer-AIML/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/fd%20trim.JPG?raw=true)
 
 
-### TRUTH TABLE 
 
 ### Result:
+Thus, a half adder and full adder circuit is designed to verify its truth table in Quartus using Verilog programming.
